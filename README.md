@@ -1,3 +1,4 @@
+
 # BI & Big Data - Laboratorio 02
 
 ## Objetivo
@@ -13,4 +14,8 @@ y versionar el cambio con Git.
 ## Alcance
 El laboratorio termina cuando el esquema aparece correctamente
 en Unity Catalog. No se crean tablas ni se cargan datos.
+
+=======
+# bi-bigdata-lab02
+Laboratorio  de big data sesión 02
 
