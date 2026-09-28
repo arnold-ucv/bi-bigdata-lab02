@@ -1,0 +1,51 @@
+Table DIM_DATE {
+  date_key int [pk]
+  full_date date
+  day int
+  month int
+  month_name varchar
+  quarter int
+  year int
+}
+
+Table DIM_PRODUCT {
+  product_key int [pk]
+  product_id int
+  product_name varchar
+  brand varchar
+  subcategory varchar
+  category varchar
+}
+
+Table DIM_STORE {
+  store_key int [pk]
+  store_id int
+  store_name varchar
+  city varchar
+  region varchar
+  country varchar
+}
+
+Table DIM_CUSTOMER {
+  customer_key int [pk]
+  customer_id int
+  customer_name varchar
+  city varchar
+  region varchar
+}
+
+Table FACT_SALES {
+  sales_key int [pk]
+  date_key int
+  product_key int
+  store_key int
+  customer_key int
+  quantity int
+  unit_price decimal
+  sales_amount decimal
+}
+
+Ref: FACT_SALES.date_key > DIM_DATE.date_key
+Ref: FACT_SALES.product_key > DIM_PRODUCT.product_key
+Ref: FACT_SALES.store_key > DIM_STORE.store_key
+Ref: FACT_SALES.customer_key > DIM_CUSTOMER.customer_key
