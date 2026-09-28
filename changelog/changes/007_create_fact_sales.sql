@@ -1,6 +1,6 @@
 --liquibase formatted sql
 --changeset arnold-ucv:007
-CREATE TABLE IF NOT EXISTS ${catalog}.gold.fact_sales (
+CREATE TABLE IF NOT EXISTS workspace.bi_lab_avillanuevahu.fact_sales (
     sale_id BIGINT,
     date_key INT,
     product_key BIGINT,
@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS ${catalog}.gold.fact_sales (
     unit_price DECIMAL(12,2),
     sales_amount DECIMAL(14,2)
 ) USING DELTA;
---rollback DROP TABLE IF EXISTS ${catalog}.gold.fact_sales;
+--rollback DROP TABLE IF EXISTS workspace.bi_lab_avillanuevahu.fact_sales;

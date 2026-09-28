@@ -1,6 +1,6 @@
 --liquibase formatted sql
 --changeset arnold-ucv:003
-CREATE TABLE IF NOT EXISTS ${catalog}.gold.dim_date (
+CREATE TABLE IF NOT EXISTS workspace.bi_lab_avillanuevahu.dim_date (
     date_key INT,
     full_date DATE,
     day INT,
@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS ${catalog}.gold.dim_date (
     quarter INT,
     year INT
 ) USING DELTA;
---rollback DROP TABLE IF EXISTS ${catalog}.gold.dim_date;
+--rollback DROP TABLE IF EXISTS workspace.bi_lab_avillanuevahu.dim_date;
