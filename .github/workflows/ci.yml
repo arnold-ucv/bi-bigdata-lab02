@@ -32,8 +32,8 @@ jobs:
           DATABRICKS_CATALOG: ${{ secrets.DATABRICKS_CATALOG }}
         run: |
           liquibase \
-            --changelog-file=changelog/db.changelog-master.sql \
-            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;AuthMech=3;httpPath=${DATABRICKS_HTTP_PATH};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
+            --changelog-file=changelog/db.changelog-master.yaml \
+            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;AuthMech=3;httpPath=${DATABRICKS_HTTP_PATH};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=bi_lab_avillanuevahu;" \
             --username=token \
             --password="${DATABRICKS_TOKEN}" \
             validate
@@ -46,8 +46,8 @@ jobs:
           DATABRICKS_CATALOG: ${{ secrets.DATABRICKS_CATALOG }}
         run: |
           liquibase \
-            --changelog-file=changelog/db.changelog-master.sql \
-            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;AuthMech=3;httpPath=${DATABRICKS_HTTP_PATH};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
+            --changelog-file=changelog/db.changelog-master.yaml \
+            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;AuthMech=3;httpPath=${DATABRICKS_HTTP_PATH};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=bi_lab_avillanuevahu;" \
             --username=token \
             --password="${DATABRICKS_TOKEN}" \
             status --verbose
@@ -60,8 +60,8 @@ jobs:
           DATABRICKS_CATALOG: ${{ secrets.DATABRICKS_CATALOG }}
         run: |
           liquibase \
-            --changelog-file=changelog/db.changelog-master.sql \
-            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;AuthMech=3;httpPath=${DATABRICKS_HTTP_PATH};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=default;" \
+            --changelog-file=changelog/db.changelog-master.yaml \
+            --url="jdbc:databricks://${DATABRICKS_HOST}:443/default;AuthMech=3;httpPath=${DATABRICKS_HTTP_PATH};ConnCatalog=${DATABRICKS_CATALOG};ConnSchema=bi_lab_avillanuevahu;" \
             --username=token \
             --password="${DATABRICKS_TOKEN}" \
             update-sql
